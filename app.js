@@ -6,6 +6,9 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 
 const app = express();
+const path = require("path");
+const static1 = path.join(__dirname,"/views");
+app.use(express.static(static1));
 
 app.set('view engine', 'ejs');
 
