@@ -11,6 +11,9 @@ const static1 = path.join(__dirname,"/views");
 app.use(express.static(static1));
 
 app.set('view engine', 'ejs');
+const static2 = path.join(__dirname,"/public");
+app.use(express.static(static2));
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
